@@ -1,12 +1,15 @@
-image: python:2.7
+FROM python:2.7
 
 MAINTAINER kevin, https://github.com/thekevinchi/joinbot
 
-RUN apt-get -y update
-RUN apt-get -y install python-pip python-dev python-setuptools git  supervisor
+# Install Dependencies
+RUN apt-get update \
+ && apt-get install python-pip python-dev python-setuptools git supervisor -y
 
+# Update Pip
 RUN pip install --upgrade pip
 
+# Add a Volume
 WORKDIR /data
 VOLUME ["/data"]
 
