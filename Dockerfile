@@ -1,4 +1,4 @@
-image: python:3.6
+image: python:2.7
 
 MAINTAINER kevin, https://github.com/thekevinchi/joinbot
 
